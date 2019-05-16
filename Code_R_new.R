@@ -65,6 +65,13 @@ table(ovarian$CENTER)
 #ovarian<-cbind(ovarian,CENTER)
 #table(ovarian$CENTER)
 
+#Creation randomvariable
+
+set.seed(20)
+RANDOM<-round(runif(1198,1,4),digits=0)
+ovarian<-cbind(ovarian,RANDOM)
+head(ovarian)
+
 #Distribution of the survival times
 fitdistr(ovarian$TIME[ovarian$TRT==2 & ovarian$TIME>0], densfun="weibull")
 
