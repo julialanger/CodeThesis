@@ -70,11 +70,11 @@ table(ovarian$CENTER)
 fitdistr(ovarian$TIME[ovarian$TRT==2 & ovarian$TIME>0], densfun="weibull")
 
 plot(density(ovarian$TIME[ovarian$TRT==1]), main="Density of the survival time of the control group vs Weibull (1,3.48)")
-lines(dweibull(seq(0:0.0005:100),1,3.48),col="red")
+lines(dweibull(seq(0:0.0005:100),1,3.48),col="red",lwd=2)
 legend(x=8,y=0.2,legend=c("Control group", "Weibull"),col=c("black", "red"), lty=1:2)
 
 plot(density(ovarian$TIME[ovarian$TRT==2]), main="Density of the survival time of the experimental group vs Weibull (1,4)")
-lines(dweibull(seq(0:0.0005:100),1,4),col="red")
+lines(dweibull(seq(0:0.0005:100),1,4),col="red",lwd=2)
 legend(x=8,y=0.2,legend=c("Experimental group", "Weibull"),col=c("black", "red"), lty=1:2)
 
 #Kaplan-Meier
